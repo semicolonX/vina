@@ -1,1 +1,13 @@
 /* components/like/index.wxss */
+.container{
+  width: 32rpx;
+  height: 32rpx;
+  background-color: #EB846D;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.container image{
+  width: 32rpx;
+  height: 32rpx;
+}
