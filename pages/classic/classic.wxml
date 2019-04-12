@@ -1,2 +1,7 @@
 <!--pages/classic/classic.wxml-->
-<text>pages/classic/classic.wxml</text>
+<view class='container'>
+  <view class='items color1'> </view>
+  <view class='items color2'> </view>
+  <view class='items color3'> </view>
+</view>
+<v-like/>

@@ -1,1 +1,23 @@
 /* pages/classic/classic.wxss */
+.container{
+  height: 5px;
+  width: 100%;
+  background-color: #999999;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.items{
+  width: 33.333%;
+  /* height: 5px; */
+}
+.color1{
+  background-color: #DD5246;
+}
+.color2{
+  background-color: #FFCD42;
+}
+.color3{
+  background-color: #1CA261;
+}
