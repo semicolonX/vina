@@ -26,7 +26,9 @@ Page({
 
     function likeRes(res){
       console.log(res.data);
-      that.setData(res.data);
+      that.setData({
+        "classic": res.data.data
+      });
     }
 
   },
