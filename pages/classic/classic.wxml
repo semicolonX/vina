@@ -4,4 +4,4 @@
   <view class='items color2'> </view>
   <view class='items color3'> </view>
 </view>
-<v-like/>
+<v-like count='{{data.count}}' like='{{data.like}}'/>

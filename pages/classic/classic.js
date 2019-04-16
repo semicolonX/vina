@@ -1,7 +1,5 @@
 // pages/classic/classic.js
-import {
-  HTTP
-} from '../../utils/http.js';
+import {HTTP} from '../../utils/http.js';
 var http = new HTTP();
 
 Page({
@@ -19,17 +17,16 @@ Page({
   onLoad: function(options) {
     var that = this;
     var params = {
-      "url": "https://www.easy-mock.com/mock/5cb43ad028e46b7d09a0c3ac/like/like",
+      "url": "/like/like",
       "method": "POST",
       "data": {},
       "sucess": likeRes
     };
     http.request(params);
 
-    function likeRes(data){
-      console.log(data.data)
-      that.setData(data.data)
-      console.log(that.data.statusCode)
+    function likeRes(res){
+      console.log(res.data);
+      that.setData(res.data);
     }
 
   },
@@ -38,7 +35,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    
   },
 
   /**

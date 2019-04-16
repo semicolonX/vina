@@ -10,7 +10,7 @@ Component({
     },
     count:{
       type:Number,
-      value:9
+      value:0
     }
   },
 

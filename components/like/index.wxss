@@ -17,4 +17,5 @@
   display: inline-block;
   color: #999999;
   margin-left: 2rpx;
+  /* font-family: "PingFangSC-Thin|思源"； */
 }

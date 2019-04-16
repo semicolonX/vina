@@ -1,11 +1,16 @@
+import {config} from "../config.js";
+
 class HTTP{
   request(params){
+
+    var baseUrl = config.vina_url + params.url;
+
     if(!params.method){
       params.method = "POST";
     }
   
     wx.request({
-      url: params.url,
+      url: baseUrl,
       data: params.data,
       method: params.method,
       header:{
@@ -19,13 +24,22 @@ class HTTP{
         if (startChar == '2'){
           params.sucess && params.sucess(res);
         } else {
-          params.error && params.error(res);
+          showErr(code);
         }
       },
       fail:function(err){
-        params.fail && params.fail(res);
+        // params.fail && params.fail(res);
+        showErr(code);
       }
     });
+
+    function showErr(code){
+      wx.showToast({
+        title: code+'报错',
+        icon: "none",
+        duration: 2000
+      });
+    }
   }
 };
 
