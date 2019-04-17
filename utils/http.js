@@ -24,16 +24,16 @@ class HTTP{
         if (startChar == '2'){
           params.sucess && params.sucess(res);
         } else {
-          showErr(code);
+          _showErr(code);
         }
       },
       fail:function(err){
         // params.fail && params.fail(res);
-        showErr(code);
+        _showErr(code);
       }
     });
 
-    function showErr(code){
+    function _showErr(code){
       wx.showToast({
         title: code+'报错',
         icon: "none",

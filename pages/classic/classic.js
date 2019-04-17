@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    index: 1
   },
 
   /**
@@ -31,6 +31,11 @@ Page({
       });
     }
 
+  },
+  onlike: function(event) {
+    console.log(event);
+    var behavior = event.detail.behavior;
+    console.log(behavior);
   },
 
   /**

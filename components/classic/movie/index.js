@@ -5,10 +5,12 @@ Component({
    */
   properties: {
     img:{
-      type: String
+      type: String,
+      value: "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1701034894,121214726&fm=26&gp=0.jpg"
     },
     content:{
-      type: String
+      type: String,
+      value: "人生不能像做菜，把所有的料准备好才下锅"
     }
   },
 

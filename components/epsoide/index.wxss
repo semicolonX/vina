@@ -1,0 +1,33 @@
+/* components/epsoide/index.wxss */
+.container{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 24rpx;
+  height: 60rpx;
+}
+.issue{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.issue_issue{
+  font-size: 60rpx;
+  line-height: 60rpx;
+  font-weight: 800;
+  margin-right: 14rpx;
+}
+.issue_I{
+  width: 2px;
+  height: 44rpx;
+  margin-right: 14rpx;
+  border-left: 1px solid black;
+}
+.date{
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  align-items: center;
+  height: 48rpx;
+}

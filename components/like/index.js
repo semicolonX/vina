@@ -28,11 +28,16 @@ Component({
   methods: {
     onLike:function(){
       
-      let count = this.properties.count;
+      var count = this.properties.count;
       count = this.properties.like ? count - 1 : count + 1;
       this.setData({
         count: count,
         like: !this.properties.like
+      });
+      
+      var behavior = this.properties.like;
+      this.triggerEvent('like',{
+        behavior: behavior
       })
     }
   }
