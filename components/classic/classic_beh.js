@@ -8,11 +8,11 @@ var classic_beh = Behavior({
     }
   },
 
-  data: {
+  attached () {
 
   },
-  
-  attached: {
+
+  data: {
 
   },
 
