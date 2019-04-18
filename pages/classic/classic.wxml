@@ -10,4 +10,4 @@
   <v-like id='VLike' bind:like='onlike' count='{{classic.count}}' like='{{classic.like}}' />
 </view>
 
-<v-movie content='{{classic.content}}' img='{{classic.image}}' />
+<v-movie content='{{classic.content}}' image='{{classic.image}}' />

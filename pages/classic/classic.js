@@ -8,7 +8,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    index: 1
+    index: 1,
+    classic: {
+      "image": "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1701034894,121214726&fm=26&gp=0.jpg",
+      "content": "人生不能像做菜，把所有的料准备好了才下锅",
+      "count": 10,
+      "like": true
+    }
   },
 
   /**
@@ -32,6 +38,7 @@ Page({
     }
 
   },
+  
   onlike: function(event) {
     console.log(event);
     var behavior = event.detail.behavior;

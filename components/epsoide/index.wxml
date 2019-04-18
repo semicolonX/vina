@@ -1,7 +1,7 @@
 <!--components/epsoide/index.wxml-->
 <view class='container'>
   <view class='issue'>
-    <text class='issue_word'>NO.</text>
+    <text class='issue_word'>No.</text>
     <text class='issue_issue'>{{_index}}</text>
     <view class='issue_I'></view>
   </view>

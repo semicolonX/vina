@@ -1,17 +1,14 @@
 // components/classic/movie/index.js
+import { classic_beh } from "../classic_beh.js";
+
 Component({
   /**
    * 组件的属性列表
    */
+  behaviors: [classic_beh],
+
   properties: {
-    img:{
-      type: String,
-      value: "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1701034894,121214726&fm=26&gp=0.jpg"
-    },
-    content:{
-      type: String,
-      value: "人生不能像做菜，把所有的料准备好才下锅"
-    }
+    
   },
 
   /**

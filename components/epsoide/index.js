@@ -15,6 +15,7 @@ Component({
       }
     }
   },
+  
   attached () {
     var date = new Date();
     var year = date.getFullYear();

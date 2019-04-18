@@ -1,6 +1,6 @@
 <!--components/classic/movie/index.wxml-->
 <view class='container_movie'>
-  <image class='movieHost' src='{{img}}'></image>
+  <image class='movieHost' src='{{image}}'></image>
   <image class='moveLB' src='../../images/movie@tag.png'></image>
   <text class='movieContent'>{{content}}</text>
   <!-- <image class='movieHost' src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1701034894,121214726&fm=26&gp=0.jpg'></image>
