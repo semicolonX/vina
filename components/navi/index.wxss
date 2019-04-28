@@ -1,0 +1,22 @@
+/* components/navi/index.wxss */
+.container{
+  width: 600rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+}
+.icon{
+  width: 80rpx;
+  height: 80rpx;
+}
+.navi_cont{
+  width: 440rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

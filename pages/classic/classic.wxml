@@ -1,13 +1,18 @@
 <!--pages/classic/classic.wxml-->
 <view class='container'>
-  <view class='items color1' />
-  <view class='items color2' />
-  <view class='items color3' />
-</view>
+  <view class='line'>
+    <view class='items color1' />
+    <view class='items color2' />
+    <view class='items color3' />
+  </view>
 
-<view class='header'>
-  <v-epsoide index='{{index}}' />
-  <v-like id='VLike' bind:like='onlike' count='{{classic.count}}' like='{{classic.like}}' />
-</view>
+  <view class='header'>
+    <v-epsoide index='{{index}}' />
+    <v-like id='VLike' bind:like='onlike' count='{{classic.count}}' like='{{classic.like}}' />
+  </view>
 
-<v-movie content='{{classic.content}}' image='{{classic.image}}' />
+  <v-movie content='{{classic.content}}' image='{{classic.image}}' />
+  <v-music />
+
+  <v-navi class='navi' bind:navi='onnavi' navi_left='{{left}}' navi_right='{{right}}' content='{{classic.title}}' />
+</view>

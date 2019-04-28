@@ -5,6 +5,9 @@ var classic_beh = Behavior({
     },
     content: {
       type: String
+    },
+    hidden: {
+      type: Boolean
     }
   },
 

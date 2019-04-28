@@ -2,7 +2,7 @@ import {config} from "../config.js";
 
 class HTTP{
   request(params){
-
+    
     var baseUrl = config.vina_url + params.url;
 
     if(!params.method){
