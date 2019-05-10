@@ -1,0 +1,6 @@
+<!--components/classic/essay/index.wxml-->
+<view hidden='{{hidden}}' class='container_movie'>
+  <image class='movieHost' src='{{image}}'></image>
+  <image class='moveLB' src='../../images/essay@tag.png'></image>
+  <text class='movieContent'>{{content}}</text>
+</view>

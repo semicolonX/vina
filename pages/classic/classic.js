@@ -87,8 +87,26 @@ Page({
       http.request(params);
     }
 
-    console.log(this.data.classic);
+    if (this.data.classic.index == wx.getStorageSync('index')){
+      this.setData({
+        "left":true
+      })
+    } else {
+      this.setData({
+        "left": false
+      })
+    }
+    if (this.data.classic.index == 6) {
+      this.setData({
+        "right": true
+      })
+    } else {
+      this.setData({
+        "right": false
+      })
+    }
 
+    console.log(this.data.classic);
 
   },
 
