@@ -64,8 +64,9 @@ Component({
       }
     },
     _musicTap:function(){
-      
+      console.log("音乐")
       mMgr.onPlay(()=>{
+        console.log("音乐播放了")
         this._musicUpdate();
       })
       mMgr.onPause(() => {
