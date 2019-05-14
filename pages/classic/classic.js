@@ -52,7 +52,28 @@ Page({
       "classic": res.data.data
     });
 
+    this._naviCanClick();
     wx.setStorageSync('index' + res.data.data.index, res.data.data);
+  },
+  _naviCanClick: function () {
+    if (this.data.classic.index == wx.getStorageSync('index')) {
+      this.setData({
+        "left": true
+      })
+    } else {
+      this.setData({
+        "left": false
+      })
+    }
+    if (this.data.classic.index == 6) {
+      this.setData({
+        "right": true
+      })
+    } else {
+      this.setData({
+        "right": false
+      })
+    }
   },
   
   onlike: function (event) {
@@ -76,7 +97,7 @@ Page({
       this.setData({
         "classic": wx.getStorageSync('index' + index)
       });
-      
+      this._naviCanClick();
     } else {
       var params = {
         "url": "/like/like" + index,
@@ -86,26 +107,7 @@ Page({
       };
       http.request(params);
     }
-
-    if (this.data.classic.index == wx.getStorageSync('index')){
-      this.setData({
-        "left":true
-      })
-    } else {
-      this.setData({
-        "left": false
-      })
-    }
-    if (this.data.classic.index == 6) {
-      this.setData({
-        "right": true
-      })
-    } else {
-      this.setData({
-        "right": false
-      })
-    }
-
+    
     console.log(this.data.classic);
 
   },

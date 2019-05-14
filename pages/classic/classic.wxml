@@ -12,7 +12,8 @@
   </view>
 
   <v-movie hidden='{{classic.type != "movie"}}' content='{{classic.content}}' image='{{classic.image}}' />
-  <v-music hidden='{{classic.type != "music"}}' content='{{classic.content}}' image='{{classic.image}}' />
+  <v-music wx:if='{{classic.type == "music"}}' src='{{classic.src}}' content='{{classic.content}}' image='{{classic.image}}' />
+  <!-- <v-music hidden='{{classic.type != "music"}}' src='{{classic.src}}' content='{{classic.content}}' image='{{classic.image}}' /> -->
   <v-essay hidden='{{classic.type != "sentence"}}' content='{{classic.content}}' image='{{classic.image}}' />
 
   <v-navi class='navi' bind:navi='onnavi' navi_left='{{left}}' navi_right='{{right}}' content='{{classic.title}}' />
