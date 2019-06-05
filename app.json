@@ -1,6 +1,9 @@
 {
   "pages": [
-    "pages/classic/classic"
+    "pages/classic/classic",
+    "pages/book/book",
+    "pages/my/my",
+    "pages/book-detail/book-detail"
   ],
   "requiredBackgroundModes": [
     "audio"
@@ -10,5 +13,31 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "去这儿",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#666666",
+    "selectedColor": "#000000",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/classic/classic",
+        "text": "流行",
+        "iconPath": "images/classic.png",
+        "selectedIconPath": "images/classic@highlight.png"
+      },
+      {
+        "pagePath": "pages/book/book",
+        "text": "书屋",
+        "iconPath": "images/book.png",
+        "selectedIconPath": "images/book@highlight.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my@highlight.png"
+      }
+    ]
   }
 }

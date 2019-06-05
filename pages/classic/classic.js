@@ -1,6 +1,8 @@
 // pages/classic/classic.js
-import {HTTP} from '../../utils/http.js';
+import { HTTP } from '../../utils/http.js';
+import { HTTP_P } from '../../utils/http_p.js';
 var http = new HTTP();
+var http_p = new HTTP_P();
 
 Page({
 
@@ -33,6 +35,54 @@ Page({
       "sucess": that._likeRes
     };
     http.request(params);
+
+    // promise的应用
+    // var promise = new Promise((resolve,reject)=>{
+    //   wx.getSystemInfo({
+    //     success: res => resolve(res),
+    //     fail: error => reject(error)
+    //   })
+    // })
+    // promise.then(
+    //   res => console.log(res),
+    //   error => console.log(res)
+    // )
+    // promise的应用  实例
+    // var promise = new Promise((resolve,reject)=>{
+    //   http_p.request("/like/like7", params.data, 
+    //     res => resolve(res), 
+    //     error => {
+    //       console.log("ERROR:" + error.statusCode)
+    //       reject()
+    //     }, 
+    //     "POST"); 
+    // })
+    // function promise_02(){
+    //   return new Promise((resolve, reject) => {
+    //     http_p.request("/like/like6", params.data,
+    //       res => resolve(res), 
+    //       error => {
+    //         console.log("ERROR:"+error.statusCode)
+    //         reject()
+    //       }, 
+    //        "POST");
+    //   })
+    // }
+    // promise.then(
+    //   res=>{
+    //     console.log(res) 
+    //     return promise_02(); 
+    //   }
+    // ).then(
+    //   res => {
+    //     console.log(res) 
+    //     return promise; 
+    //   } 
+    // ).then(
+    //   res => {
+    //     console.log(res)
+    //   }
+    // )
 
   },
 
@@ -110,7 +160,7 @@ Page({
     }
     
     console.log(this.data.classic);
-
+    
   },
 
   /**
