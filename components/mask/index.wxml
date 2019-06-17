@@ -1,0 +1,11 @@
+<!--components/mask/index.wxml-->
+<view class='container' catchtouchmove='true'>
+  <!-- <view class='board'>
+    <scroll-view scroll-y="true" style='height:200px;width:100%;'>
+      <view style='height:100px;width:100px;background-color:red;'></view>
+      <view style='height:100px;width:100px;background-color:blue;'></view>
+      <view style='height:100px;width:100px;background-color:green;'></view>
+      <view style='height:100px;width:100px;background-color:yellow;'></view>
+    </scroll-view>
+  </view> -->
+</view>
