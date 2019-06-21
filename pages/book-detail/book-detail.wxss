@@ -2,7 +2,7 @@
 page{
   height: 100%;
   overflow: auto;
-  -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .container{
   background-color: #f5f5f5;
@@ -12,6 +12,7 @@ page{
 }
 .maskBG{
   overflow: hidden;
+  -webkit-overflow-scrolling: auto;
 }
 .head{
   background-color: #fff;
