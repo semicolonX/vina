@@ -73,7 +73,7 @@
         </v-tag>
       </block>
   </view>
-  <input bindconfirm='tapping' class='post' placeholder='短评最多12个字'></input>
+  <input bindconfirm='tapping' class='post' auto-focus='true' placeholder='短评最多12个字'></input>
 </view>
 
 <v-mask wx:if="{{posting}}" bind:tap='onFakePost'/>

@@ -2,13 +2,17 @@ import { config } from "../config.js";
 
 class HTTP_P {
 
-  request(url, data, resolve, reject, method) {
+  request(url, data = {}, method = "POST"){
+
+    return new Promise((resolve, reject) => { 
+      this._request(url, resolve, reject, data = {}, method = "POST")
+    })
+    
+  }
+
+  _request(url, resolve, reject, data, method) {
 
     var baseUrl = config.vina_url + url;
-
-    if (!method) {
-      method = "POST";
-    }
 
     wx.request({
       url: baseUrl,
@@ -23,14 +27,14 @@ class HTTP_P {
         var code = res.statusCode.toString();
         var startChar = code.charAt(0);
         if (startChar == '2') {
-          resolve && resolve(res);
+          resolve(res)
         } else {
-          reject && reject(res);
-          _showErr(code);
+          reject()
+          _showErr(code)
         }
       },
       fail: function (error) {
-        reject && reject(res);
+        reject()
         _showErr(code);
       }
     });

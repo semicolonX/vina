@@ -8,20 +8,29 @@ Page({
    * 页面的初始数据
    */
   data: {
-    books:[]
+    books:[],
+    searching:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    bookModel.getHotList((res)=>{
-      console.log(res)
+    
+    var getHotList = bookModel.getHotList()
 
+    getHotList.then(res => { 
+      console.log(res)
       this.setData({
         books:res.data.data
       })
-      
+    })
+
+  },
+
+  showSearch(){
+    this.setData({
+      searching: !this.data.searching
     })
   },
 

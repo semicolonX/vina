@@ -5,9 +5,10 @@ class BookModel extends HTTP_P{
     super()
   }
 
-  getHotList(sucess){
-    this.request('/like/book', {}, sucess)
+  getHotList(){
+    return this.request('/like/book')
   }
+
 }
 
 export { BookModel }
