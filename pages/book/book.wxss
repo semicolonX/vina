@@ -61,3 +61,9 @@
 .books-container v-book{
   margin-bottom: 10rpx;
 }
+
+.load-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

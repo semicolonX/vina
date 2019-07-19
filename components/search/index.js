@@ -8,7 +8,11 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    more:{
+      type: String,
+      value: 'false',
+      observer:'lodeMore'
+    }
   },
 
   /**
@@ -26,6 +30,7 @@ Component({
     this.setData({
       historyWords
     })
+
   },
 
   /**
@@ -41,20 +46,30 @@ Component({
         searchBook: true
       })
     },
+
     searchCancel(){
       this.setData({
         keywords: '',
         searchBook: false
       })
     },
+
     cancelSearch(){
       this.triggerEvent('cancelSearch')
     },
+
     tapping(event){
       this.setData({
         keywords: event.detail.content,
         searchBook: true
       })
+    },
+
+    lodeMore(){
+      console.log(123)
+      // this.triggerEvent('more',{
+
+      // })
     }
   }
 })
