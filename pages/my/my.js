@@ -5,14 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    getUserInfo: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.getUserInfo({
+      success: (res)=> {
+        console.log(res)
+        this.setData({
+          getUserInfo: true
+        })
+      },
+      fail: (err)=> {
+        console.log(err)
+      }
+    })
+  },
+  onGotUserInfo: function (e) {
+    console.log(e)
+    console.log(e.detail.errMsg)
+    console.log(e.detail.userInfo)
+    console.log(e.detail.rawData)
+    if (e.detail.errMsg.indexOf('ok') != -1){
+      this.setData({
+        getUserInfo: true
+      })
+    }
+    
   },
 
   /**

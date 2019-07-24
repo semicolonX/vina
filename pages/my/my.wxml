@@ -1,2 +1,27 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class='head'>
+  <!-- <image class="head_area" src='../../images/clickme.png' wx:if="{{!getUserInfo}}"></image> -->
+  <!-- <open-data class="head_area" type="userAvatarUrl" wx:if="{{getUserInfo}}"></open-data> -->
+  <image class="headCover" src='../../images/my@bg.png'></image>
+  <view class="headBox">
+    <view class="yuan" wx:if="{{getUserInfo}}">
+      <open-data class="headImg" type="userAvatarUrl"></open-data>
+    </view>
+
+    <v-button id='getUserInfo' open-type='getUserInfo' bind:onGotUserInfo='onGotUserInfo' wx:if="{{!getUserInfo}}">
+      <image slot='image' class='headImg' src='../../images/clickme.png'></image>
+    </v-button>
+    <!-- <button id='getUserInfo' open-type='getUserInfo' bind:getuserinfo="onGotUserInfo" wx:if="{{!getUserInfo}}"> 
+      <image class='headImg' src='../../images/clickme.png'></image>
+    </button> -->
+  </view>
+  <view class="headWord name" wx:if="{{getUserInfo}}">
+      <open-data type="userNickName"></open-data>
+  </view>
+</view>
+
+
+<!-- <button open-type='getUserInfo' bind:getuserinfo="onGotUserInfo"> 授权 </button> -->
+
+
+

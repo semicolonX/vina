@@ -1,0 +1,7 @@
+/* components/image-button/index.wxss */
+.getUserInfo{
+  padding: 0;
+  border-radius: 50%;
+  width: 150rpx;
+	height: 150rpx;
+}

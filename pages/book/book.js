@@ -10,6 +10,7 @@ Page({
   data: {
     books:[],
     searching:false,
+    loading: false,
     more: ''
   },
 

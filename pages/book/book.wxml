@@ -19,6 +19,6 @@
 
 <v-search more="{{more}}" bind:cancelSearch='showSearch' wx:if="{{searching}}" />
 
-<!-- <v-loading class="load-center" /> -->
+<v-loading class="load-center"  wx:if="{{loading}}"/>
 
 
